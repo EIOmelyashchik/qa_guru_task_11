@@ -1,9 +1,9 @@
 package enums;
 
 public enum App {
-    RUNNING("Weight Loss Running by Verv", "Бег для похудения by Verv"),
+    RUNNING("Weight Loss Running by Verv", "Weight Loss Running by Verv"),
     WALKING("Weight Loss Walking by Verv ", ""),
-    FITNESS("Home Fitness for Weight Loss", "Фитнес для похудения by Verv")
+    FITNESS("Home Fitness for Weight Loss", "Weight Loss Fitness at Home by Verv")
     ;
 
     String titleAppStore;
