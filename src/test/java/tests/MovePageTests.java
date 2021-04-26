@@ -14,6 +14,7 @@ import pages.MovePage;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import static io.qameta.allure.Allure.parameter;
 import static io.qameta.allure.Allure.step;
 
 
@@ -28,6 +29,8 @@ public class MovePageTests extends TestBase {
     @Feature("Links")
     @Tag("web")
     void checkAppSoreLinks(App app) {
+        parameter("App", app.name());
+        parameter("Name on the App Store page", app.getTitleAppStore());
         Allure.getLifecycle().updateTestCase(tc ->
                 tc.setName(String.format("Verify App Store link on the '%s' page for '%s' application",
                         page.name(), app.name())));
@@ -47,6 +50,8 @@ public class MovePageTests extends TestBase {
     @Feature("Links")
     @Tag("web")
     void checkGooglePlayLinks(App app) {
+        parameter("App", app.name());
+        parameter("Name on the Google Play page", app.getTitleGooglePlay());
         Allure.getLifecycle().updateTestCase(tc ->
                 tc.setName(String.format("Verify Google Play link on the '%s' page for '%s' application",
                         page.name(), app.name())));

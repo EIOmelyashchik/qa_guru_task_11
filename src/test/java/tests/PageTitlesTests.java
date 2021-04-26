@@ -13,6 +13,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 
 import static com.codeborne.selenide.Selenide.*;
+import static io.qameta.allure.Allure.parameter;
 import static io.qameta.allure.Allure.step;
 
 
@@ -26,6 +27,8 @@ public class PageTitlesTests extends TestBase {
     @Tag("web_mob")
     @Tag("web")
     void checkTitles(Page page) {
+        parameter("Page", page.name());
+        parameter("Title", page.getTitle());
         Allure.getLifecycle().updateTestCase(tc ->
                 tc.setName("Verify title on the page: " + page.name()));
 
