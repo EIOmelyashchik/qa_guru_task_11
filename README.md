@@ -15,7 +15,7 @@
 
 This project has written in [Java](https://go.java/) using [Selenide](https://selenide.org) framework. 
 [Gradle](https://gradle.org) is used to build the project.
-[JUnit 5](https://junit.org/junit5/) is used as a unit-testing framework.
+[JUnit 5](https://junit.org/junit5/) is used as a testing framework.
 [Allure Report](http://allure.qatools.ru), [Allure TestOps](https://docs.qameta.io/allure-testops/) and 
 [Telegram Bot](https://core.telegram.org/bots) are used to visualize test results.
 Tests are launched from [Jenkins](). [Selenoid](https://aerokube.com/selenoid/) is used to run browsers in 
